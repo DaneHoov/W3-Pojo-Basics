@@ -20,8 +20,36 @@ keyInObjectArray(objArray, 'animal'); // => false
 ***********************************************************************/
 
 function keyInObjectArray(objArray, keyString) {
-  // Your code here 
+
+  //   for (let el of objArray) {
+
+  //     if (keyString in el) {
+  //       return true;
+  //     }
+  //   }
+  //   return false;
+  // }
+
+  for (let el of objArray) {
+    let arr = Object.keys(el);
+    if (arr.includes(keyString)) {
+      return true;
+    }
+    console.log(arr);
+  }
+  return false;
 }
+
+let objArray = [
+  { name: "Rupert" },
+  { age: 42 },
+  { planet: "Earth", system: "Milky Way" }
+];
+
+console.log(keyInObjectArray(objArray, 'planet')); // => true
+console.log(keyInObjectArray(objArray, 'age')); // => true
+console.log(keyInObjectArray(objArray, 'food')); // => false
+console.log(keyInObjectArray(objArray, 'animal')); // => false
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = keyInObjectArray;
