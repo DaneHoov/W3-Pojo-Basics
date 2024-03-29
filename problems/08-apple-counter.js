@@ -33,7 +33,7 @@ function appleCounter(appleObj) {
   let count = 0
   let keys = Object.keys(appleObj)
   for (let el of keys) {
-    if (el.includes('apple')) {
+    if (el.toLowerCase().includes('apple')) {
       count++
     }
 
@@ -52,8 +52,8 @@ console.log(appleCounter(obj2)); // => 2
 
 
 let obj3 = {
-  crabapple: "yum!",
-  honeyapple: "super yum",
+  crabApple: "yum!",
+  honeyApple: "super yum",
   banana: "yay",
   bigapple: "NYC"
 };
