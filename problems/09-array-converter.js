@@ -14,15 +14,14 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 function arrayConverter(array) {
   let objCount = {};
 
+  for (let el of array) {
+    // for (let i = 0; i < array.length; i++) {
 
 
-  for (let i = 0; i < array.length; i++) {
-
-    let key = array[i];
-    if (objCount[key] === undefined) {
-      objCount[key] = 1;
+    if (objCount[el] === undefined) {
+      objCount[el] = 1;
     } else {
-      objCount[key] += 1
+      objCount[el] += 1
     }
   }
 
